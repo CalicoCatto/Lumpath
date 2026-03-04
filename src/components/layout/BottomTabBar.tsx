@@ -15,7 +15,7 @@ export default function BottomTabBar() {
   if (location.pathname.startsWith('/diagnosis/')) return null;
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-stone-200 pb-[env(safe-area-inset-bottom)]">
+    <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-stone-200 pb-[env(safe-area-inset-bottom)] md:hidden">
       <div className="flex items-center justify-around h-14 max-w-lg mx-auto">
         {tabs.map(({ path, label, icon: Icon }) => {
           const active = location.pathname === path;
